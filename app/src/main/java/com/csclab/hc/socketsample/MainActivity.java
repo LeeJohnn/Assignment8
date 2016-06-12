@@ -82,6 +82,8 @@ public class MainActivity extends Activity implements android.view.View.OnClickL
         btnSub.setOnClickListener(this);
         btnMult.setOnClickListener(this);
         btnDiv.setOnClickListener(this);
+
+
     }
 
     /** Function for onclick() implement */
