@@ -14,9 +14,11 @@ import android.util.Log;
 import java.io.PrintWriter;
 import java.io.OutputStreamWriter;
 
+
 public class MainActivity extends Activity implements android.view.View.OnClickListener{
     /** Init Variable for IP page **/
     EditText inputIP;
+    //boolean fuck;
     Button ipSend;
     String ipAdd = "";
 
