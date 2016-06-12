@@ -1,0 +1,409 @@
+Index: app/src/main/res/values/styles.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/styles.xml	(revision )
++++ app/src/main/res/values/styles.xml	(revision )
+@@ -0,0 +1,11 @@
++<resources>
++
++    <!-- Base application theme. -->
++    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
++        <!-- Customize your theme here. -->
++        <item name="colorPrimary">@color/colorPrimary</item>
++        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
++        <item name="colorAccent">@color/colorAccent</item>
++    </style>
++
++</resources>
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/AndroidManifest.xml	(revision )
++++ app/src/main/AndroidManifest.xml	(revision )
+@@ -0,0 +1,21 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="com.csclab.hc.socketsample">
++
++    <uses-permission android:name="android.permission.INTERNET"/>
++    <application
++        android:allowBackup="true"
++        android:icon="@mipmap/ic_launcher"
++        android:label="@string/app_name"
++        android:supportsRtl="true"
++        android:theme="@style/AppTheme">
++        <activity android:name=".MainActivity">
++            <intent-filter>
++                <action android:name="android.intent.action.MAIN" />
++
++                <category android:name="android.intent.category.LAUNCHER" />
++            </intent-filter>
++        </activity>
++    </application>
++
++</manifest>
+\ No newline at end of file
+Index: app/src/main/res/layout/result_page.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/result_page.xml	(revision )
++++ app/src/main/res/layout/result_page.xml	(revision )
+@@ -0,0 +1,28 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent">
++
++    <LinearLayout
++        android:orientation="vertical"
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:weightSum="1">
++
++        <EditText
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:id="@+id/textResult"
++            android:layout_gravity="center_horizontal"
++            android:layout_weight="0.16" />
++
++        <Button
++            android:layout_width="116dp"
++            android:layout_height="wrap_content"
++            android:text="return"
++            android:id="@+id/return_button"
++            android:layout_gravity="center_horizontal"
++            android:layout_weight="0.14"
++            android:clickable="false" />
++    </LinearLayout>
++</LinearLayout>
+Index: app/src/main/res/values/dimens.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/dimens.xml	(revision )
++++ app/src/main/res/values/dimens.xml	(revision )
+@@ -0,0 +1,5 @@
++<resources>
++    <!-- Default screen margins, per the Android Design guidelines. -->
++    <dimen name="activity_horizontal_margin">16dp</dimen>
++    <dimen name="activity_vertical_margin">16dp</dimen>
++</resources>
+Index: app/src/main/res/values-w820dp/dimens.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values-w820dp/dimens.xml	(revision )
++++ app/src/main/res/values-w820dp/dimens.xml	(revision )
+@@ -0,0 +1,6 @@
++<resources>
++    <!-- Example customization of dimensions originally defined in res/values/dimens.xml
++         (such as screen margins) for screens with more than 820dp of available width. This
++         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
++    <dimen name="activity_horizontal_margin">64dp</dimen>
++</resources>
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_main.xml	(revision )
++++ app/src/main/res/layout/activity_main.xml	(revision )
+@@ -0,0 +1,87 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="fill_parent"
++    android:layout_height="fill_parent"
++    android:orientation="vertical"
++    android:paddingBottom="@dimen/activity_vertical_margin"
++    android:paddingLeft="@dimen/activity_horizontal_margin"
++    android:paddingRight="@dimen/activity_horizontal_margin"
++    android:paddingTop="@dimen/activity_vertical_margin"
++    tools:context="com.csclab.hc.androidpratice.MainActivity">
++
++    <LinearLayout
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:id="@+id/linearLayout1"
++        android:layout_marginLeft="10pt"
++        android:layout_marginRight="10pt"
++        android:layout_marginTop="3pt">
++        <EditText
++            android:layout_weight="1"
++            android:layout_height="wrap_content"
++            android:layout_marginRight="5pt"
++            android:id="@+id/inputNumTxt1"
++            android:layout_width="match_parent"
++            android:inputType="numberDecimal">
++        </EditText>
++        <EditText
++            android:layout_height="wrap_content"
++            android:layout_weight="1"
++            android:layout_marginLeft="5pt"
++            android:id="@+id/inputNumTxt2"
++            android:layout_width="match_parent"
++            android:inputType="numberDecimal">
++        </EditText>
++    </LinearLayout>
++    <LinearLayout
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:id="@+id/linearLayout2"
++        android:layout_marginTop="3pt"
++        android:layout_marginLeft="5pt"
++        android:layout_marginRight="5pt">
++        <Button
++            android:layout_height="wrap_content"
++            android:layout_width="match_parent"
++            android:layout_weight="1"
++            android:text="+"
++            android:textSize="8pt"
++            android:id="@+id/btnAdd">
++        </Button>
++        <Button
++            android:layout_height="wrap_content"
++            android:layout_width="match_parent"
++            android:layout_weight="1"
++            android:text="-"
++            android:textSize="8pt"
++            android:id="@+id/btnSub">
++        </Button>
++        <Button
++            android:layout_height="wrap_content"
++            android:layout_width="match_parent"
++            android:layout_weight="1"
++            android:text="*"
++            android:textSize="8pt"
++            android:id="@+id/btnMult">
++        </Button>
++        <Button
++            android:layout_height="wrap_content"
++            android:layout_width="match_parent"
++            android:layout_weight="1"
++            android:text="/"
++            android:textSize="8pt"
++            android:id="@+id/btnDiv">
++        </Button>
++    </LinearLayout>
++    <TextView
++        android:layout_height="wrap_content"
++        android:layout_width="match_parent"
++        android:layout_marginLeft="5pt"
++        android:layout_marginRight="5pt"
++        android:textSize="12pt"
++        android:layout_marginTop="3pt"
++        android:id="@+id/tvResult"
++        android:gravity="center_horizontal">
++    </TextView>
++</LinearLayout>
+Index: app/src/main/res/layout/ip_page.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/ip_page.xml	(revision )
++++ app/src/main/res/layout/ip_page.xml	(revision )
+@@ -0,0 +1,30 @@
++<?xml version="1.0" encoding="utf-8"?>
++<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    android:layout_width="match_parent" android:layout_height="match_parent"
++    android:id="@+id/button">
++
++    <TextView
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:textAppearance="?android:attr/textAppearanceLarge"
++        android:text="The IP of my server is:"
++        android:id="@+id/textView"
++        android:layout_alignParentTop="true"
++        android:layout_centerHorizontal="true"
++        android:layout_marginTop="75dp" />
++
++    <EditText
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:id="@+id/edIP"
++        android:layout_below="@+id/textView"
++        android:layout_centerHorizontal="true" />
++
++    <Button
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="OK!"
++        android:id="@+id/ipButton"
++        android:layout_below="@+id/edIP"
++        android:layout_centerHorizontal="true" />
++</RelativeLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/csclab/hc/socketsample/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/csclab/hc/socketsample/MainActivity.java	(revision 24e02dbb74c9d83768ee7235ae5383d483037830)
++++ app/src/main/java/com/csclab/hc/socketsample/MainActivity.java	(revision )
+@@ -18,6 +18,7 @@
+ public class MainActivity extends Activity implements android.view.View.OnClickListener{
+     /** Init Variable for IP page **/
+     EditText inputIP;
++
+     //boolean fuck;
+     Button ipSend;
+     String ipAdd = "";
+@@ -127,7 +128,7 @@
+         // HINT:Using log.d to check your answer is correct before implement page turning
+         Log.v("debug", "ANS " + result);
+         //TODO: Pass the result String to jumpToResultLayout() and show the result at Result view
+-
++        //System.out.println();
+         jumpToResultLayout(inputNumTxt1.getText().toString() + " " + oper + " " + inputNumTxt2.getText().toString() + " = " + result);
+ 
+     }
+Index: app/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/.gitignore	(revision )
++++ app/.gitignore	(revision )
+@@ -0,0 +1,1 @@
++/build
+Index: app/src/test/java/com/csclab/hc/socketsample/ExampleUnitTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/test/java/com/csclab/hc/socketsample/ExampleUnitTest.java	(revision )
++++ app/src/test/java/com/csclab/hc/socketsample/ExampleUnitTest.java	(revision )
+@@ -0,0 +1,15 @@
++package com.csclab.hc.socketsample;
++
++import org.junit.Test;
++
++import static org.junit.Assert.*;
++
++/**
++ * To work on unit tests, switch the Test Artifact in the Build Variants view.
++ */
++public class ExampleUnitTest {
++    @Test
++    public void addition_isCorrect() throws Exception {
++        assertEquals(4, 2 + 2);
++    }
++}
+\ No newline at end of file
+Index: app/src/androidTest/java/com/csclab/hc/socketsample/ApplicationTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/androidTest/java/com/csclab/hc/socketsample/ApplicationTest.java	(revision )
++++ app/src/androidTest/java/com/csclab/hc/socketsample/ApplicationTest.java	(revision )
+@@ -0,0 +1,13 @@
++package com.csclab.hc.socketsample;
++
++import android.app.Application;
++import android.test.ApplicationTestCase;
++
++/**
++ * <a href="http://d.android.com/tools/testing/testing_android.html">Testing Fundamentals</a>
++ */
++public class ApplicationTest extends ApplicationTestCase<Application> {
++    public ApplicationTest() {
++        super(Application.class);
++    }
++}
+\ No newline at end of file
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>x-windows-950
+===================================================================
+--- app/build.gradle	(revision )
++++ app/build.gradle	(revision )
+@@ -0,0 +1,26 @@
++apply plugin: 'com.android.application'
++
++android {
++    compileSdkVersion 23
++    buildToolsVersion "23.0.3"
++
++    defaultConfig {
++        applicationId "com.csclab.hc.socketsample"
++        minSdkVersion 14
++        targetSdkVersion 23
++        versionCode 1
++        versionName "1.0"
++    }
++    buildTypes {
++        release {
++            minifyEnabled false
++            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
++        }
++    }
++}
++
++dependencies {
++    compile fileTree(dir: 'libs', include: ['*.jar'])
++    testCompile 'junit:junit:4.12'
++    compile 'com.android.support:appcompat-v7:23.4.0'
++}
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/strings.xml	(revision )
++++ app/src/main/res/values/strings.xml	(revision )
+@@ -0,0 +1,3 @@
++<resources>
++    <string name="app_name">SocketSample</string>
++</resources>
+Index: app/src/main/res/values/colors.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/colors.xml	(revision )
++++ app/src/main/res/values/colors.xml	(revision )
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources>
++    <color name="colorPrimary">#3F51B5</color>
++    <color name="colorPrimaryDark">#303F9F</color>
++    <color name="colorAccent">#FF4081</color>
++</resources>
+Index: app/proguard-rules.pro
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/proguard-rules.pro	(revision )
++++ app/proguard-rules.pro	(revision )
+@@ -0,0 +1,17 @@
++# Add project specific ProGuard rules here.
++# By default, the flags in this file are appended to flags specified
++# in /Users/Gary/Library/Android/sdk/tools/proguard/proguard-android.txt
++# You can edit the include path and order by changing the proguardFiles
++# directive in build.gradle.
++#
++# For more details, see
++#   http://developer.android.com/guide/developing/tools/proguard.html
++
++# Add any project specific keep options here:
++
++# If your project uses WebView with JS, uncomment the following
++# and specify the fully qualified class name to the JavaScript interface
++# class:
++#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
++#   public *;
++#}
